@@ -1,0 +1,20 @@
+-- create a table
+/*
+CREATE TABLE Sep2025JunkDB.nathan_matten.Customers (
+    customer_id INT PRIMARY KEY IDENTITY(1,1),
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100),
+    subscription VARCHAR(50),
+    join_date DATE DEFAULT GETDATE()
+)
+
+INSERT INTO Sep2025JunkDB.nathan_matten.Customers (first_name, last_name, email, subscription)
+VALUES ('Ava', 'Rodriguez', 'ava.rodriguez@email.com','pro'),
+    ('Liam','Patel','liam.patel@email.com','free'),
+    ('Noah','Chen','noah.chen@email.com','basic');
+*/
+
+UPDATE Sep2025JunkDB.nathan_matten.Customers
+SET email = 'noah.chen@newdomain.com'
+WHERE customer_id = 3
